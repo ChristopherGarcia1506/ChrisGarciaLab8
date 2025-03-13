@@ -9,7 +9,7 @@
     tools:context=".HomeFragment">
 
 
-    <!-- TODO: Update blank fragment layout -->
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,8 +39,8 @@
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="168dp"
         android:src="@drawable/maradona"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

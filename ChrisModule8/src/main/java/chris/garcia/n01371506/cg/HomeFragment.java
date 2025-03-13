@@ -7,12 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.android.material.snackbar.Snackbar;
+
 public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -20,7 +18,18 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    private  int[] images = {//image links
+            R.drawable.maradona,
+            R.drawable.graduation,
+            R.drawable.mbdtf,
+            R.drawable.trilogy,
+            R.drawable.tna
+    };
+
+
+    private int i = 0; //image count
+    private int z = 0; // click count
+
     private String mParam1;
     private String mParam2;
 
@@ -49,6 +58,31 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //---ImageButton ---
+        ImageButton imageButton = view.findViewById(R.id.imageButton);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                i++;
+                z++;
+                if(i >= images.length){
+                    i = 0;
+                }
+                imageButton.setImageResource(images[i]);
+
+               DisplaySnackBar(view,"Chris Garcia  "+z);
+            }
+        });
+
+        return view;
+    }
+
+    private void DisplaySnackBar(View view, String msg){
+        Snackbar snackbar = Snackbar.make(view,msg,Snackbar.LENGTH_SHORT);
+        snackbar.show();
     }
 }
