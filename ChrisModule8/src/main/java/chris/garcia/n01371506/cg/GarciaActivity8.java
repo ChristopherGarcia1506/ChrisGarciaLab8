@@ -43,24 +43,40 @@ public class GarciaActivity8 extends AppCompatActivity implements NavigationView
         int id = item.getItemId();
         if (id == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-
+            alertPopUp();
         } else if (id == R.id.nav_settings) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
-
+            alertPopUp();
         } else if (id == R.id.nav_share) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
-
+            alertPopUp();
         } else if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
-
+            alertPopUp();
         } else if (id == R.id.nav_logout) {
             Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
-
+            alertPopUp();
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+    private void alertPopUp() {  // alert popup settings
+        new AlertDialog.Builder(this)
+                .setTitle("Chris Garcia")
+                .setMessage("Do you want to exit the app?")
+                .setPositiveButton("yes", (dialog, which) -> {
 
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=r4l9bFqgMaQ"));
+                    startActivity(intent);
+                })
+                .setNegativeButton("no", (dialog, which) -> {
+
+                })
+                .setCancelable(false)
+                .show();
+
+
+    }
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
