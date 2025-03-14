@@ -28,4 +28,7 @@
     <string name="enter_student_id">Enter Student Id</string>
     <string name="current_gmt_time">"Current GMT Time: "</string>
     <string name="ok">OK</string>
+    <string name="chris">Chris</string>
+    <string name="garcia">Garcia</string>
+    <string name="no_data">No Data</string>
 </resources>

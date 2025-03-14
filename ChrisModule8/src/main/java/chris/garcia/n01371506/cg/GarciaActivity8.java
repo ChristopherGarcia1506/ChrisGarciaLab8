@@ -2,6 +2,7 @@
 package chris.garcia.n01371506.cg;
 
 import android.app.AlertDialog;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ import java.util.TimeZone;
 public class GarciaActivity8 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawerLayout;
+    private int counter = 0;//counter for toast
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +81,7 @@ public class GarciaActivity8 extends AppCompatActivity implements NavigationView
             alertShareScreen();
         } else if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.Chrfragment_container, new AboutFragment()).commit();
-            alertPopUp();
+            DisplayToast();
         } else if (id == R.id.nav_logout) {
             Toast.makeText(this, R.string.logout, Toast.LENGTH_SHORT).show();
             alertPopUp();
@@ -121,5 +123,13 @@ public class GarciaActivity8 extends AppCompatActivity implements NavigationView
                 .setPositiveButton(R.string.ok, null)
                 .setCancelable(false)
                 .show();
+    }
+
+
+    //---Toast for About Fragment ---
+    private void DisplayToast(){
+        counter++;
+        String msg = "Counter: " + counter + " Chris Garcia";
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

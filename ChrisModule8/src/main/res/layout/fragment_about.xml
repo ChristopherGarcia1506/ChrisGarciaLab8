@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightPink"
     tools:context=".AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,9 +13,41 @@
         android:id="@+id/ChrText7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_us_fragment"
-        android:textSize="30sp"
         android:layout_centerInParent="true"
-        android:textColor="@color/lavender"/>
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="80dp"
+        android:rotation="45"
+        android:text="@string/chris"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlue"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/ChrText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="148dp"
+        android:rotation="-45"
+        android:text="@string/garcia"
+        android:textColor="@color/red"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ChrDatatextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="268dp"
+        android:text="@string/no_data"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

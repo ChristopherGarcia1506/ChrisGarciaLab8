@@ -106,22 +106,22 @@ public class ShareFragment extends Fragment {
         SharedPreferences sharedPreferences = context.getSharedPreferences("SavedData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(key, value); // Save a string
-        editor.apply(); // Asynchronously save the data
+        editor.apply();
     }
 
     public void saveDataForBoolean(Context context, String key, boolean value) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("SavedData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(key, value); // Save a string
-        editor.apply(); // Asynchronously save the data
+        editor.putBoolean(key, value); // Save a boolean
+        editor.apply();
 
     }
 
     public void saveDataForInt(Context context, String key, int value) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("SavedData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(key, value); // Save a string
-        editor.apply(); // Asynchronously save the data
+        editor.putInt(key, value); // Save an int
+        editor.apply();
 
     }
 
