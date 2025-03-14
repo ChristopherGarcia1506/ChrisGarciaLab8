@@ -1,3 +1,4 @@
+//Chris Garcia n01371506
 package chris.garcia.n01371506.cg;
 
 import android.os.Bundle;
@@ -61,7 +62,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         //---ImageButton ---
-        ImageButton imageButton = view.findViewById(R.id.imageButton);
+        ImageButton imageButton = view.findViewById(R.id.ChrimageButton);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +75,7 @@ public class HomeFragment extends Fragment {
                 }
                 imageButton.setImageResource(images[i]);
 
-               DisplaySnackBar(view,"Chris Garcia  "+z);
+               DisplaySnackBar(view,R.string.chris_garcia +" "+z);
             }
         });
 

@@ -1,19 +1,17 @@
+//Chris Garcia n01371506
 package chris.garcia.n01371506.cg;
-
-import static android.Manifest.permission.READ_MEDIA_IMAGES;
 
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.Image;
+
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
@@ -70,7 +68,7 @@ public class SettingsFragment extends Fragment {
                         imageView.setImageURI(selectedImageUri);
                     } else {
                         // Handle the case where the user didn't pick an image
-                        Toast.makeText(requireContext(), "No image selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(requireContext(), R.string.no_image_selected, Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -82,8 +80,8 @@ public class SettingsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        imageView = view.findViewById(R.id.imageView);
-        Button button2 = view.findViewById(R.id.button2);//Button
+        imageView = view.findViewById(R.id.ChrimageView);
+        Button button2 = view.findViewById(R.id.Chrbutton2);//Button
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,10 +110,10 @@ public class SettingsFragment extends Fragment {
 
         if (requestCode == PermissionCode) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getContext(),"Permission Allowed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.permission_allowed, Toast.LENGTH_SHORT).show();
                 openGallery();
             } else {
-                Toast.makeText(getContext(),"Permission Denied \tAPI: ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.permission_denied_api, Toast.LENGTH_SHORT).show();
             }
         }
     }

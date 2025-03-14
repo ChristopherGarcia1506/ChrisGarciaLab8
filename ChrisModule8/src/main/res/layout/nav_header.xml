@@ -9,19 +9,22 @@
     android:background="@drawable/headerbkg"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
     <ImageView
+        android:id="@+id/ChrImgView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/aklogo"/>
     <TextView
+        android:id="@+id/ChrText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chris Garcia"
+        android:text="@string/chris_garcia"
         android:textColor="@color/white"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/ChrText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="n01371506@humber.ca"
+        android:text="@string/n01371506_humber_ca"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"/>

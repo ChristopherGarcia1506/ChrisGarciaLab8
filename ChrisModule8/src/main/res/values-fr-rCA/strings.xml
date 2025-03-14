@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Chris Garcia N01371506 -->
+<resources>
+    <string name="app_name">ChrisLab8</string>
+    <string name="open_nav">Ouvrir le tiroir de navigation</string>
+    <string name="close_nav">Fermer le tiroir de navigation</string>
+    <!-- TODO: Supprimer ou modifier ce texte de remplacement -->
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="about_us_fragment">Fragment À Propos</string>
+    <string name="chris_garcia">Chris Garcia</string>
+    <string name="settings">Paramètres</string>
+    <string name="access_photos">Accéder aux photos</string>
+    <string name="share_fragment">Partager le fragment</string>
+    <string name="n01371506_humber_ca">n01371506@humber.ca</string>
+    <string name="https_www_youtube_com_watch_v_r4l9bfqgmaq">https://www.youtube.com/watch?v=r4l9bFqgMaQ</string>
+    <string name="do_you_want_to_exit_the_app">Voulez-vous quitter l'application ?</string>
+    <string name="yes">oui</string>
+    <string name="no">non</string>
+    <string name="logout">Déconnexion !</string>
+    <string name="no_image_selected">Aucune image sélectionnée</string>
+    <string name="permission_allowed">Permission accordée</string>
+    <string name="permission_denied_api">"Permission refusée \tAPI : "</string>
+</resources>

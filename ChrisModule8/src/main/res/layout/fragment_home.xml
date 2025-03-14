@@ -12,12 +12,13 @@
 
 
     <TextView
+        android:id="@+id/ChrText6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginStart="136dp"
         android:layout_marginTop="96dp"
-        android:text="Chris Garcia"
+        android:text="@string/chris_garcia"
         android:textColor="@color/red"
         android:textSize="25sp"
         android:textStyle="italic|bold"
@@ -26,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Chrbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
@@ -36,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ChrimageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"

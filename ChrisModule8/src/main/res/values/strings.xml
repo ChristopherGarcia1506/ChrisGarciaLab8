@@ -1,7 +1,22 @@
+<!--Chris Garcia N01371506 -->
 <resources>
     <string name="app_name">ChrisLab8</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us_fragment">About Us Fragment</string>
+    <string name="chris_garcia">Chris Garcia</string>
+    <string name="settings">Settings</string>
+    <string name="access_photos">Access Photos</string>
+    <string name="share_fragment">Share Fragment</string>
+    <string name="n01371506_humber_ca">n01371506@humber.ca</string>
+    <string name="https_www_youtube_com_watch_v_r4l9bfqgmaq">https://www.youtube.com/watch?v=r4l9bFqgMaQ</string>
+    <string name="do_you_want_to_exit_the_app">Do you want to exit the app?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="logout">Logout!</string>
+    <string name="no_image_selected">No image selected</string>
+    <string name="permission_allowed">Permission Allowed</string>
+    <string name="permission_denied_api">"Permission Denied \tAPI: "</string>
 </resources>
