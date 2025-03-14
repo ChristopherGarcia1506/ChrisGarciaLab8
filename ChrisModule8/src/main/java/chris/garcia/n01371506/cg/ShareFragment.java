@@ -91,8 +91,10 @@ public class ShareFragment extends Fragment {
                 //store checkbox
                 saveDataForBoolean(requireContext(), "checkbox", checkbox);//storing checkbox
                 DisplaySnackBar(view,"email: "+getSavedString(getContext(),"email")+"  Checkbox: "+getSavedBoolean(getContext(),
-                        "checkbox")+" Student Id:14)"+ getSavedInt(getContext(),"id"));
+                        "checkbox")+" Student Id: "+ getSavedInt(getContext(),"id"));
 
+                emailInput.setText("");
+                idInput.setText("");
             }
         });
 
@@ -125,6 +127,12 @@ public class ShareFragment extends Fragment {
 
     private void DisplaySnackBar(View view, String msg){
         Snackbar snackbar = Snackbar.make(view,msg,Snackbar.LENGTH_INDEFINITE);
+        snackbar.setAction("Dismiss", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                snackbar.dismiss();
+            }
+        });
         snackbar.show();
     }
    // Retrieving Saved Data
