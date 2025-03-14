@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/ChreditTextTextEmailAddress"
+        android:id="@+id/ChreditTextEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="140dp"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ChrShareImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
