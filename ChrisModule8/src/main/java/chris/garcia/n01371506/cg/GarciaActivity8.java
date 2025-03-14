@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +38,23 @@ public class GarciaActivity8 extends AppCompatActivity implements NavigationView
             getSupportFragmentManager().beginTransaction().replace(R.id.Chrfragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+        // Handle back button events
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    // If you want to keep the default behavior, call this:
+                    setEnabled(false);
+                    GarciaActivity8.super.onBackPressed();
+                }
+            }
+        };
+
+        // Add the callback to the OnBackPressedDispatcher
+        getOnBackPressedDispatcher().addCallback(this, callback);
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -63,6 +81,7 @@ public class GarciaActivity8 extends AppCompatActivity implements NavigationView
     private void alertPopUp() {  // alert popup settings
         new AlertDialog.Builder(this)
                 .setTitle(R.string.chris_garcia)
+                .setIcon(R.drawable.brazuca)
                 .setMessage(R.string.do_you_want_to_exit_the_app)
                 .setPositiveButton(R.string.yes, (dialog, which) -> {
 
@@ -77,12 +96,5 @@ public class GarciaActivity8 extends AppCompatActivity implements NavigationView
 
 
     }
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
+
 }

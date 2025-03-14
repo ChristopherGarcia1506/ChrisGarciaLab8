@@ -20,4 +20,10 @@
     <string name="permission_allowed">Permission Allowed</string>
     <string name="permission_denied_api">"Permission Denied \tAPI: "</string>
     <string name="button">Button</string>
+    <string name="profile">Profile</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="id">ID:</string>
+    <string name="enter_student_id">Enter Student Id</string>
 </resources>
