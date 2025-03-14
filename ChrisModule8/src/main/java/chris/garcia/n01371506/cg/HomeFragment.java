@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -61,10 +63,13 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        //---ImageButton ---
-        ImageButton imageButton = view.findViewById(R.id.ChrimageButton);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+
+        //---ImageButton ---
+        ImageView imageView = view.findViewById(R.id.ChrimageView);
+
+        Button button = view.findViewById(R.id.Chrbutton);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -73,7 +78,7 @@ public class HomeFragment extends Fragment {
                 if(i >= images.length){
                     i = 0;
                 }
-                imageButton.setImageResource(images[i]);
+                imageView.setImageResource(images[i]);
 
                DisplaySnackBar(view,R.string.chris_garcia +" "+z);
             }
